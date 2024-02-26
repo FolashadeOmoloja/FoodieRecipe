@@ -82,6 +82,10 @@ img{
 .nav__container{
     justify-content: space-between;
 }
+
+.nav__container a{
+    color: #2b2a2a;
+}
 .nav__logo{
     font-family: var(--pacifico);
     font-size: 2rem;
@@ -187,9 +191,19 @@ border: 2px solid #a1c4fd;
     width: 100%;
     font-weight: 600;
     transition: var(--transition);
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+   
 }
+
+.nav__dash{
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;  
+}
+
+.nav__logout{
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;  
+}
+
 
 .nav__profile ul li a:hover{
 background: #c2e9fb;
