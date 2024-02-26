@@ -1,40 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@600;700&display=swap');
+
 /* custom styling */
 body, *{
     padding: 0;
     margin: 0;
     overflow-x: hidden;
     box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    list-style: none;
+    appearance: none;
+    outline: none;
 }
 
 
 :root {
-    /* --text-gray: #3f4954;
-    --text-light: #686666da;
-    --bg-color: #0f0f0f;
-    --white: #ffffff;
-    --midnight: #104f55;
- 
-    --Abel: 'Abel', cursive;
-    --Anton: 'Anton', cursive;
-    --Josefin: 'Josefin', cursive;
-    --Lexend: 'Lexend', cursive;
-    --Livvic: 'Livvic', cursive; */
+    --Lobster: "Lobster", sans-serif;
+    --inter: "Inter", sans-serif; /* any font weight can be used*/
     --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
     --transition: all 300ms ease;
 
-    --container-width-lg: 74%;
+    --container-width-lg: 90%;
     --container-width-md: 88%;
     --form-width: 40%;
 
 }
 
-li{
-    list-style: none;
+body{
+    font-family: "Inter", sans-serif; ;
 }
+
+/* General styles */
 
 .flex-row{
     display: flex;
     flex-direction: row;
     /* flex-wrap: wrap; */
-
 }
+
+.div-center{
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: var(--container-width-lg);
+    max-width: 1800px;
+    margin-inline: auto;
+}
+
+.section{
+    margin-top: 2rem ;
+    width: 100vw;
+}
+
+/* Navbar style */
+.nav__logo{
+    font-family: var(--Lobster);
+}
+.nav__logo img{
+    width: 24px;
+    height: 24px;
+}
+
