@@ -167,4 +167,31 @@ border: 2px solid #a1c4fd;
     border: 0.2rem solid #a1c4fd;
 }
 
+.nav__profile{
+    position: relative;
+    cursor: pointer;
+}
 
+.nav__profile ul{
+    position: absolute;
+    top: 125%;
+    right: 0;
+    box-shadow:  0 5px 5px rgba(0, 0, 0, 0.4);
+    background: #a1c4fd;
+    border-radius: 12px;
+}
+
+.nav__profile ul li a{
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    font-weight: 600;
+    transition: var(--transition);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.nav__profile ul li a:hover{
+background: #c2e9fb;
+    
+}
