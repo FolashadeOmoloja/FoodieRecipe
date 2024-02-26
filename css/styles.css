@@ -107,8 +107,9 @@ img{
     padding: 4px 0;
     transition: var(--transition);
 }
+
   
-.nav__items li::after {
+.nav__items-inactive::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -121,10 +122,10 @@ img{
   transition: transform 300ms;
 }
 
-.nav__items li:hover a, .nav__items-active{
+.nav__items-inactive:hover a, .nav__items-active a{
     color: #a1c4fd;
 }
-.nav__items li:hover::after {
+.nav__items-inactive:hover::after {
   
   transform: scaleX(1);
 }
@@ -141,11 +142,23 @@ border-bottom: 3px solid #a1c4fd ;
     background: #a1c4fd;
     color: white;
     font-weight: 600;
+    box-shadow:  1px 1px 3px rgba(0, 0, 0, 0.5);
+    transition: var(--transition);
 }
+
 
 .login__btn{
     background: #c2e9fb;
     margin-right: 1rem;
+}
+
+.login__btn:hover{
+border: 2px solid #a1c4fd;
+}
+
+.signup__btn:hover{
+    border: 2px solid #c2e9fb;
+    background: #92b2e6;
 }
  .avatar{
     width: 3rem;
