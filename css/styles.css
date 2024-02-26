@@ -18,7 +18,6 @@ body, *{
 :root {
     --Lobster: "Lobster", sans-serif;
     --pacifico: "Pacifico", cursive;
-    --inter: "Inter", sans-serif; /* any font weight can be used*/
     --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
     --transition: all 300ms ease;
 
@@ -33,6 +32,15 @@ body{
 }
 
 /* General styles */
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.rounded{
+    border-radius: 50%;
+}
 
 .flex-row,.flex-column, .flex-wrap{
     display: flex;
@@ -90,5 +98,60 @@ body{
 }
 
 .nav__items{
-  justify-content: space-between;
+  gap: 32px;
+  font-weight: 600;
 }
+
+.nav__items li{
+    position: relative;
+    padding: 4px 0;
+    transition: var(--transition);
+}
+  
+.nav__items li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #a1c4fd;
+  transform-origin: center;
+  transform: scaleX(0);
+  transition: transform 300ms;
+}
+
+.nav__items li:hover a, .nav__items-active{
+    color: #a1c4fd;
+}
+.nav__items li:hover::after {
+  
+  transform: scaleX(1);
+}
+  
+.nav__items-active{
+border-bottom: 3px solid #a1c4fd ;
+}
+
+.login__buttons{
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    background: #a1c4fd;
+    color: white;
+    font-weight: 600;
+}
+
+.login__btn{
+    background: #c2e9fb;
+    margin-right: 1rem;
+}
+ .avatar{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 0.2rem solid #a1c4fd;
+}
+
+
