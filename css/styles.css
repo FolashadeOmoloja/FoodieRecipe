@@ -265,6 +265,7 @@ background: #c2e9fb;
     }
 
     .nav__items,  .nav__login, .nav__login-btns{
+        display: none;
       flex-direction: column; 
       align-items: center; 
       gap: 20px;
@@ -273,6 +274,7 @@ background: #c2e9fb;
       right: 0px;
       width: 100%;
       background: #c2e9fb;
+      transition: var(--transition);
     }
 
   .nav__items,  .nav__login{
