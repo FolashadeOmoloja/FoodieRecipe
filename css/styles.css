@@ -285,6 +285,23 @@ background: #c2e9fb;
 
 
   /* Categories section */
+  .cat-items{
+    margin-top: 5rem;
+  }
+
+  .cat-item{
+    gap: 1rem;
+    font-weight: bold;
+  }
+
+  .cat-item div{
+    width: 8.5rem;
+    height: 8.5rem;
+  }
+
+  .cat-item div, .cat-item div>img{
+    border-radius: 50%;
+  }
 
 
 
