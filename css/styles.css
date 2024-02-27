@@ -274,17 +274,23 @@ background: #c2e9fb;
       position: absolute;
       top: 100%;
       right: 0px;
-      width: 10rem;
+      width: 100%;
       background: #c2e9fb;
+    }
+
+  .nav__items,  .nav__login{
+        padding-top:20px 
+    }
+
+    .nav__items li{
+        padding: 0;
     }
 
     .nav__login{
         position: absolute;
        top: 195%;
-       right: 0;
     }
-
-    .login__btn{
+   .login__btn{
         margin: auto;
     }
 
@@ -306,9 +312,9 @@ background: #c2e9fb;
         margin: 0;
     }
     
-    /* .login__btn{
-        margin: 0 0 0 0;
-    } */
+    .signup__btn, .nav__profile{
+        padding-bottom: 20px;
+    }
       
 
 }
