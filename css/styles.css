@@ -83,6 +83,10 @@ h2{
     margin-top: 8rem ;
 }
 
+.cont__text{
+    color: #878787;
+}
+
 .hidden, .nav__resp-btns{
     display: none;
 }
@@ -249,12 +253,10 @@ background: #c2e9fb;
 
 .header__left p{
     margin: 20px 0 30px 0;
-    color: #878787;
 }
 
 .header__left p+a+p{
   margin-top: 50px;
-    color: #878787;
 }
 
 .header__left p+a+p > a{
@@ -302,6 +304,10 @@ background: #c2e9fb;
     border-radius: 50%;
   }
 
+  /* Trending Recipes Section */
+.trending__container p{ 
+margin: 0.5rem 0 2rem 0;
+}
 
 
 /* Media queries medium devices */
@@ -437,6 +443,14 @@ background: #c2e9fb;
         width: 6rem;
         height: 6rem;
       }
+
+      .cat-item div img{
+        cursor: pointer;
+    }
+    .cat-item div>img:hover{
+        filter: saturate(0);
+        transition: filter 500ms ease;
+    }
 
       
 }
