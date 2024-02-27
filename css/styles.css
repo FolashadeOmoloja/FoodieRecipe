@@ -35,6 +35,11 @@ img{
     height: 100%;
 }
 
+h1{
+    font-size: 4rem;
+    color: #2b2a2a;
+}
+
 .rounded{
     border-radius: 50%;
 }
@@ -223,6 +228,37 @@ border: 2px solid #a1c4fd;
 .nav__profile ul li a:hover{
 background: #c2e9fb;
     
+}
+
+/* Header styles */
+
+.header__container{
+    margin-top: 2rem ;
+    justify-content: space-between;
+}
+
+.header__container section{
+    flex-basis: 50%;
+    height: 30rem;
+}
+
+.header__right div{
+    height:28rem ;
+    width: 100%;
+}
+
+.header__right div img{
+    object-fit: cover;
+}
+
+.header__left h1 span{
+    color: #a1c4fd;
+}
+
+.header__left p{
+    margin: 20px 0;
+    width: 520px;
+    color: #878787;
 }
 
 
