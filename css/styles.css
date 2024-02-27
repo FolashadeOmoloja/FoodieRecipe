@@ -41,7 +41,6 @@ h1{
 
 h2{
     font-size: 2.5rem;
-    /* font-weight: 600; */
 }
 
 .rounded{
@@ -307,8 +306,19 @@ background: #c2e9fb;
 
 /* Media queries medium devices */
 @media screen and (max-width: 1024px) {
+    h1{
+        font-size: 3rem;
+     }
+
+     h2{
+        font-size: 1.7rem;
+     }
     .container{
         width: var(--container-width-md);
+    }
+
+    .cont__section{
+        margin-top: 4rem ;
     }
 
     /* navbar */
@@ -399,10 +409,6 @@ background: #c2e9fb;
     }
 
     /* Header styles */
-
-    h1{
-        font-size: 3rem;
-    }
     .header__container{
        flex-direction: column-reverse;
     }
@@ -417,11 +423,41 @@ background: #c2e9fb;
         width: 106px;
         margin: 1rem 0;
     }
+
+    /*____ Categories styles____ */
+
+    .cat-items{
+        margin-top: 3rem;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .cat-item div{
+        width: 6rem;
+        height: 6rem;
+      }
+
       
 }
 
 /* Media queries small devices */
 @media screen and (max-width: 500px) {
+    h1{
+        font-size: 2rem;
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+    p, .cat-item>span{
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .cont__section{
+        margin-top: 2rem ;
+    }
     /* Navbar */
     .nav__logo{
         font-size: 1.5rem;
@@ -442,13 +478,15 @@ background: #c2e9fb;
     }
 
     /* Header styles */
- h1{
-    font-size: 2rem;
- }
-
  .header__right div{
-max-height: 20rem;
-  }
+    max-height: 20rem;
+      }
+
+      /*____ Categories styles____ */
+    .cat-item div{
+        width: 4.8rem;
+        height: 4.8rem;
+      }
 
 
 }
