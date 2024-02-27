@@ -280,6 +280,10 @@ background: #c2e9fb;
   transition: filter 500ms ease;
   }
 
+
+  /* Categories section */
+  
+
 /* Media queries medium devices */
 @media screen and (max-width: 1024px) {
     .container{
