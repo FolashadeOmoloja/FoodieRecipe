@@ -1,3 +1,6 @@
+
+// for the navbar control
+
 const openNavIcon =  document.querySelector(".open__nav-btn")
 const closeNavIcon =  document.querySelector(".close__nav-btn")
 const navItems = document.querySelectorAll(".nav__details")
