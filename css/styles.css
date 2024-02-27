@@ -57,6 +57,11 @@ img{
     flex-wrap: wrap;
 }
 
+.space-between{
+    justify-content: space-between;
+    width: 100%;
+}
+
 .div-center{
     justify-content: center;
     align-items: center;
@@ -73,7 +78,7 @@ img{
     width: 100vw;
 }
 
-.hidden{
+.hidden, .nav__resp-btns{
     display: none;
 }
 
@@ -82,6 +87,7 @@ img{
 .nav__container{
     justify-content: space-between;
     padding: 2rem 0;
+    position: relative;
 }
 
 .nav__container a{
@@ -224,3 +230,85 @@ background: #c2e9fb;
 
 
 /* Media queries medium devices */
+@media screen and (max-width: 1024px) {
+    .container{
+        width: var(--container-width-md);
+    }
+
+
+    /* navbar */
+
+
+    .nav__resp-btns{
+             display: block;
+    }
+
+    .nav__resp-btns button{
+        background: #c2e9fb;
+        font-size: 1.5rem;
+        border: none;
+         cursor: pointer;
+         width: 2.5rem;
+         height: 2.5rem;
+         border-radius: 50%;
+         transition: var(--transition);
+    }
+
+    .nav__resp-btns i{
+        color: #92b2e6; 
+      
+    }
+
+    .nav__resp-btns button:hover{
+        background: #afd3e2;
+    }
+
+    .nav__resp-btns button:hover i{
+        color: #7d98c4; 
+    }
+
+    .nav__items,  .nav__login, .nav__login-btns{
+      flex-direction: column; 
+      align-items: center; 
+      gap: 20px;
+      position: absolute;
+      top: 100%;
+      right: 0px;
+      width: 10rem;
+      background: #c2e9fb;
+    }
+
+    .nav__login{
+        position: absolute;
+       top: 195%;
+       right: 0;
+    }
+
+    .login__btn{
+        margin: auto;
+    }
+
+    .nav__items-inactive::after {
+        content: none;
+      }
+
+      .nav__items-active, .nav__items-active a{
+        border-bottom: none;
+        color: black;
+    }
+
+    .login__buttons, .login__btn, .login__btn:hover,   .signup__btn:hover {
+        border: none;
+        padding: 0;
+        background: transparent;
+        color: black;
+        box-shadow:  none;
+        margin: 0;
+    }
+    
+    /* .login__btn{
+        margin: 0 0 0 0;
+    } */
+      
+
+}
