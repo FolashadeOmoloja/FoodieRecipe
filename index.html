@@ -40,7 +40,7 @@
     </nav>
      <!-- NavBar Ends-->
      <!--Header -->
-     <header class="container header__container flex-row ">
+     <header class="container header__container flex-row space-between">
          <section class="header__left">
              <h1>Your favourite <span> Recipes</span> in one place</h1>
              <p class="cont__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed nesciunt cupiditate nostrum reiciendis vitae rem! Tempore laudantium accusantium totam facilis eius cupiditate eum? Modi, quidem consequatur ad aspernatur eligendi sunt.</p>
@@ -103,7 +103,7 @@
          <section class="container cont__section trending__container">
             <h2>Trending Recipes</h2>
             <p class="cont__text">Mouth savouring recipes that changed the game in the kitchen!</p>
-            <section class="trending__recipes">
+            <section class="trending__recipes space-between">
                  <div class="trending__recipe flex-column">
                     <div class="recipe_like  flex-row div-center recipe_like-clicked" > <i class="fa-solid fa-heart"></i></div>
                      <div class="trending__recipe-imagecont">
@@ -228,6 +228,28 @@
             </div>
          </section>
         <!-- Chef CTA Section Ends-->
+        <!-- Footer -->
+        <footer class="footer cont__section container">
+              <section class="flex-row  space-between  footer__top">
+                <div>
+                    <a href="index.html" class="nav__logo flex-row footer__logo"> <img src="/assets/foodie-logo.png" alt="logo"> Foodie<span>Recipes</span></a>
+                    <p class="cont__text">Your favourite Recipes in one place</p>
+                </div>
+                <ul class="flex-row footer__items  div-center">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="/recipe.html">Recipes</a></li>
+                    <li><a href="/about.html">About us</a></li>
+                </ul>
+              </section>
+              <section class="flex-row space-between">
+                <span>2024&copy;foodieRecipe</span>
+                <div class="social-icons flex-row">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                  </div>
+              </section>
+        </footer>
      <script src="/javascript/main.js"></script>
 </body>
 </html>
