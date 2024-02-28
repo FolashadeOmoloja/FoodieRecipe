@@ -279,9 +279,10 @@ background: #c2e9fb;
     object-fit: cover;
 }
 
-  .header__right div:hover img{
+  .header__right div:hover img,.cat-item div:hover img ,.trending__recipe-imagecont:hover img{
   filter: saturate(0);
-  transition: filter 500ms ease;
+  transition: filter 300ms ease;
+  cursor: pointer;
   }
 
 
@@ -310,15 +311,14 @@ margin: 0.5rem 0 2rem 0;
 }
 
 .trending__recipes{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+   display: flex;
+   flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;
     text-transform: capitalize;
 }
 
 .trending__recipe{
-    width: 400px;
+    width: 370px;
     height: 434px;
     max-height: 434px;
     position: relative;
@@ -333,6 +333,8 @@ background: #FFFFFF;
 width: 2rem;
 height: 2rem;
 border-radius: 50%;
+z-index: 10;
+cursor: pointer;
 }
 
 .recipe_like i{
@@ -513,13 +515,11 @@ border-radius: 50%;
         height: 6rem;
       }
 
-      .cat-item div img{
-        cursor: pointer;
-    }
-    .cat-item div>img:hover{
-        filter: saturate(0);
-        transition: filter 500ms ease;
-    }
+    /* Trending Recipes Section */
+    .trending__recipes{
+         justify-content: flex-start;
+         gap: 20px;
+     }
 
       
 }
