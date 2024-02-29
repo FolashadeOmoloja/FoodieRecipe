@@ -1,3 +1,9 @@
+// fetch('/index.html')
+//     .then(response => response.text())
+//     .then(data => {
+//         document.body.innerHTML += data;
+//     });
+
 
 // for the navbar control
 

@@ -1,12 +1,11 @@
 body {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #f5f5f5;
   }
   
   .form__container {
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     text-align: center;
     background-color: #fff;
     padding: 20px;
@@ -14,12 +13,22 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
+  /* .logo {
+    width: 100px;
+    margin-bottom: 20px;
+  } */
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
   form {
     margin-bottom: 20px;
   }
   
   .form-group {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    position: relative;
   }
   
   input[type="text"],
@@ -31,6 +40,13 @@ body {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  input[type="checkbox"],
+  input[type="checkbox"] + label {
+    display: inline-block;
   }
   
   button {
@@ -39,6 +55,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    padding: 10px 0;
   }
   
   button:hover {
