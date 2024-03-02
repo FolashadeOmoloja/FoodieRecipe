@@ -10,34 +10,37 @@
 </head>
 <body>
   <div class="form__container">
-    <img src="logo.png" alt="Logo" class="logo">
-    <h2>Sign Up</h2>
+    <div class="nav__logo flex-row div-center"> <img src="/assets/foodie-logo.png" alt="logo"> Foodie<span>Recipes</span></div>
+    <h3>Hello, Let's Get Started</h3>
     <form action="#">
       <div class="form-group">
-        <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
-        <i class="fas fa-user"></i>
+        <span class="input-icon  fa-regular fa-user"></span>
+        <input type="text" id="fullname" name="fullname" placeholder="Full Name" required autocomplete="given-name">
       </div>
       <div class="form-group">
+        <span class="input-icon  fa-regular fa-user"></span>
         <input type="text" id="username" name="username" placeholder="Username" required>
-        <i class="fas fa-user"></i>
       </div>
       <div class="form-group">
+        <span class="input-icon fa-regular fa-envelope"></span>
         <input type="email" id="email" name="email" placeholder="Email" required>
-        <i class="fas fa-envelope"></i>
       </div>
       <div class="form-group">
+        <span class="input-icon  fa-solid fa-eye"></span>
         <input type="password" id="password" name="password" placeholder="Password" required>
-        <i class="fas fa-lock"></i>
       </div>
       <div class="form-group">
+        <span class="input-icon  fa-solid fa-eye-slash"></span>
         <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
-        <i class="fas fa-lock"></i>
       </div>
-      <div class="form-group">
-        <label for="role">Choose your role:</label><br>
-        <input type="checkbox" id="role-viewer" name="role" value="viewer">
+      <div class="form-group role__cont flex-row">
+        <span>Choose your role:<span>
+          <div class="check-cont">
+            <input type="checkbox" id="role-viewer" name="role" checked>
+            <span class="checkmark"></span>
+          </div>
         <label for="role-viewer">Viewer</label>
-        <input type="checkbox" id="role-chef" name="role" value="chef">
+        <input type="checkbox" id="role-chef" name="role" >
         <label for="role-chef">Chef</label>
         <input type="checkbox" id="role-admin" name="role" value="admin">
         <label for="role-admin">Admin</label>
@@ -45,6 +48,10 @@
       <div class="form-group">
         <input type="checkbox" id="terms" name="terms" required>
         <label for="terms">By signing up, you agree to the <a href="#">terms and conditions</a>.</label>
+      </div>
+      <div class="signup-checkbox">
+        <input id="first_name" type="checkbox" checked="checked">
+        <label for="first_name">First Name</label>
       </div>
       <button type="submit">Sign Up</button>
     </form>

@@ -2,7 +2,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f5f5f5;
+    background-color: #a1c4fd;
+  }
+
+  h3{
+    font-size: 24px;
+    margin: 20px 0;
   }
   
   .form__container {
@@ -13,23 +18,16 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  /* .logo {
-    width: 100px;
-    margin-bottom: 20px;
-  } */
   
-  h2 {
-    margin-bottom: 20px;
-  }
-  
-  form {
+  form, .form-group {
     margin-bottom: 20px;
   }
   
   .form-group {
-    margin-bottom: 20px;
     position: relative;
   }
+
+
   
   input[type="text"],
   input[type="email"],
@@ -40,15 +38,73 @@ body {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
+  }
+
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"]{
+    padding-left: 24px;
     border: none;
     border-bottom: 1px solid #ccc;
   }
-  
-  input[type="checkbox"],
-  input[type="checkbox"] + label {
-    display: inline-block;
+
+  input::placeholder{
+    font-size: 12px;
+  }
+
+
+  .input-icon{
+    position: absolute;
+    display: block;
+    font-size: 14px;
+    top: 10px;
+    color: #ccc;
   }
   
+  input[type="checkbox"]  {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    
+  }
+
+  input[type="checkbox"]:checked {
+    background-color: #2196F3;
+  }
+
+ .check-cont{
+    position: relative;
+    /* width: 20px;
+    height: 20px; */
+ }
+
+ /* .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+} */
+
+ /* .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+
+  .check-cont input:checked ~ .checkmark:after {
+    display: block;
+  } */
   button {
     background-color: #007bff;
     color: #fff;

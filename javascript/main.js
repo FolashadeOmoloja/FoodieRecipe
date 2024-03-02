@@ -13,20 +13,18 @@ const navItems = document.querySelectorAll(".nav__details")
 
 
 
-openNavIcon.addEventListener("click", () => {
+openNavIcon? openNavIcon.addEventListener("click", () => {
      navItems.forEach((navItem)=>{
        navItem.style.display = "flex";
      })
      openNavIcon.classList.add("hidden")
      closeNavIcon.classList.remove("hidden")
-});
+}): null;
 
-closeNavIcon.addEventListener("click", () =>{
+closeNavIcon? closeNavIcon.addEventListener("click", () =>{
     navItems.forEach((navItem)=>{
         navItem.style.display = "none";
       })
       openNavIcon.classList.remove("hidden")
       closeNavIcon.classList.add("hidden")
-}
-
-)
+}): null;
