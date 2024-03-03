@@ -34,7 +34,7 @@
         <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
       </div>
       <div class="form-group role__cont ">
-        <span>Choose your role:<span>
+        <span>Choose your role:</span>
        <div class="flex-row">
         <div class='form-role-seeker'>
             <span>Recipe Seeker</span>
@@ -46,14 +46,15 @@
             <span>Admin</span>
          </div>
        </div>
-      <div class="form-group">
-        <input type="checkbox" id="terms" name="terms" required>
-        <label for="terms">By signing up, you agree to the <a href="#">terms and conditions</a>.</label>
+      <div class="form-group flex-row">
+        <div class="signup-checkbox">
+            <input id="first_name" type="checkbox" checked="checked" class="input-checkbox" required>
+            <label for="first_name" class="label-checkbox"></label>
+          </div>
+        <p for="terms">By signing up, you agree to the <a href="#">terms and conditions</a>.</p>
       </div>
-      <div class="signup-checkbox">
-        <input id="first_name" type="checkbox" checked="checked" class="input-checkbox">
-        <label for="first_name" class="label-checkbox">First Name</label>
       </div>
+
       <button type="submit">Sign Up</button>
     </form>
     <div class="signin-link">
