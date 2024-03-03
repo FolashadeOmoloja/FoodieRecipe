@@ -53,58 +53,53 @@ body {
     font-size: 12px;
   }
 
-
-  .input-icon{
+  .input-checkbox {
     position: absolute;
-    display: block;
-    font-size: 14px;
-    top: 10px;
-    color: #ccc;
-  }
-  
-  input[type="checkbox"]  {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    
+    opacity: 0;
+    height: 0;
+    width: 0;
   }
 
-  input[type="checkbox"]:checked {
-    background-color: #2196F3;
-  }
-
- .check-cont{
+  .label-checkbox {
     position: relative;
-    /* width: 20px;
-    height: 20px; */
- }
-
- /* .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 20px;
-  width: 20px;
-  background-color: #eee;
-} */
-
- /* .checkmark:after {
-    content: "";
+    display: block;
+    padding-left: 30px;
+    cursor: pointer;
+  }
+  .label-checkbox:before {
+    content: '';
     position: absolute;
-    display: none;
-    left: 9px;
-    top: 5px;
+    top: 50%;
+    margin-top: -10px;
+    left: 0;
+    display: block;
+    height: 20px;
+    width: 20px;
+    background-color: #50CDBE;
+    border-radius: 3px;
+  }
+
+  .label-checkbox:hover:before {
+    background-color: #1AE6E6;
+  }
+
+  .label-checkbox:after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 1px;
     width: 5px;
     height: 10px;
-    border: solid white;
+    border: solid #333;
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
+    opacity: 0;
   }
 
-  .check-cont input:checked ~ .checkmark:after {
-    display: block;
-  } */
+  .input-checkbox:checked + .label-checkbox:after {
+    opacity: 1;
+  }
+
   button {
     background-color: #007bff;
     color: #fff;
