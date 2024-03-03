@@ -16,6 +16,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 50px 0;
   }
   
   
@@ -27,8 +28,6 @@ body {
     position: relative;
   }
 
-
-  
   input[type="text"],
   input[type="email"],
   input[type="password"],
@@ -71,6 +70,17 @@ body {
     border-radius: 4px;
   }
 
+  .role__cont{
+    margin: 16px 0;
+    justify-content: space-between;
+  }
+
+  .role__cont div{
+       padding: 10px;
+       border-radius: 8px;
+       border: 1px solid #ccc;
+  }
+
   .input-checkbox:checked{
     background-color: #a1c4fd;
   }
@@ -100,8 +110,10 @@ body {
 
 
   button {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #a1c4fd;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -109,7 +121,7 @@ body {
   }
   
   button:hover {
-    background-color: #0056b3;
+    background-color: #92b2e6;
   }
   
   .signin-link {
