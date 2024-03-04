@@ -1,12 +1,3 @@
-// fetch('/index.html')
-//     .then(response => response.text())
-//     .then(data => {
-//         document.body.innerHTML += data;
-//     });
-
-
-// for the navbar control
-
 const openNavIcon =  document.querySelector(".open__nav-btn"),
 closeNavIcon =  document.querySelector(".close__nav-btn"),
 navItems = document.querySelectorAll(".nav__details"),
@@ -14,7 +5,8 @@ recipeSeekerRole =  document.querySelector(".form-role-seeker"),
 chefRole =  document.querySelector(".form-role-chef"),
 adminRole =  document.querySelector(".form-role-admin"),
 viewPasswordIcon = document.querySelectorAll('.view-password'),
-hidePasswordIcon = document.querySelectorAll('hide-password')
+hidePasswordIcon = document.querySelectorAll('.hide-password'),
+passwordInput = document.querySelectorAll('.password')
 
 
 
@@ -37,14 +29,27 @@ closeNavIcon ? closeNavIcon.addEventListener("click", () =>{
 
 
 //password
-viewPasswordIcon? viewPasswordIcon.forEach((viewIcon, idx)=>{
-  viewIcon.addEventListener("click", () =>{
-    console.log(viewPasswordIcon[0])
-    console.log(viewPasswordIcon[1])
-    viewIcon.style.display = 'none'
-    // hidePasswordIcon[idx].classList.remove('hidden')
-  })
-}) : null
+// Toggle password visibility when view icon is clicked
+if (viewPasswordIcon) {
+  viewPasswordIcon.forEach((viewIcon, idx) => {
+    viewIcon.addEventListener("click", () => {
+      viewIcon.style.display = 'none';
+      hidePasswordIcon[idx].style.display = 'block'
+      passwordInput[idx].type = 'text';
+    });
+  });
+}
+
+// Toggle password visibility when hide icon is clicked
+if (hidePasswordIcon) {
+  hidePasswordIcon.forEach((hideIcon, idx) => {
+    hideIcon.addEventListener("click", () => {
+      hideIcon.style.display = 'none';
+      viewPasswordIcon[idx].style.display = 'block'
+      passwordInput[idx].type = 'password';
+    });
+  });
+}
 
 
 
