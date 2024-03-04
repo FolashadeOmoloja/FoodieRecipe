@@ -258,7 +258,7 @@ background: #c2e9fb;
   margin-top: 50px;
 }
 
-.header__left p+a+p > a, .view-recipe{
+.header__left p+a+p > a, .view-recipe, .signin-link a{
    color: #92b2e6;
    font-weight: 700;
    border-bottom: 2px solid #92b2e6;

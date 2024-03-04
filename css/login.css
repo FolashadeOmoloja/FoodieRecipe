@@ -2,7 +2,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #a1c4fd;
+    background: var(--sky);
   }
 
   h3{
@@ -71,7 +71,7 @@ body {
   }
 
   .role__cont{
-    margin: 16px 0;
+    margin: 20px 0;
     justify-content: space-between;
   }
 
@@ -79,7 +79,15 @@ body {
        padding: 10px;
        border-radius: 8px;
        border: 1px solid #ccc;
+       cursor: pointer;
   }
+
+  .role__cont  .role__cont__select, .role__cont div:hover{
+    background: var(--sky);
+    border: none;
+    font-weight: 600;
+  }
+
 
   .input-checkbox:checked{
     background-color: #a1c4fd;
@@ -114,7 +122,7 @@ body {
 
 
   button {
-    background-color: #a1c4fd;
+    background: var(--sky);
     color: white;
     font-size: 18px;
     font-weight: 600;
@@ -122,13 +130,27 @@ body {
     border-radius: 5px;
     cursor: pointer;
     padding: 10px 0;
+    transition: var(--transition);
   }
   
   button:hover {
-    background-color: #92b2e6;
+    background: #a1c4fd;
   }
   
   .signin-link {
     font-size: 14px;
   }
+
+  /* Media queries small devices */
+@media screen and (max-width: 600px) {
+    .form__container {
+        text-align: center;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 50px 0;
+      }
+      
+    }
   
