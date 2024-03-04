@@ -9,6 +9,14 @@ body {
     font-size: 24px;
     margin: 20px 0;
   }
+
+  .form__signin{
+    height: 100vh;
+  }
+
+  .form__siginup__container{
+    margin: 50px 0;
+  }
   
   .form__container {
     text-align: center;
@@ -16,7 +24,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 50px 0;
+  
   }
   
   
@@ -145,9 +153,13 @@ body {
     font-size: 14px;
   }
 
+  .no-opacity{
+opacity: 0;
+  }
+
   /* Media queries small devices */
 @media screen and (max-width: 410px) {
-    .form__container {
+    .form__siginup__container {
         margin: 0;
       }
 
@@ -155,6 +167,17 @@ body {
         text-align: start;
         font-size: 12px;
     }
+
+    .form__signin{
+        background: white;
+    }
+
+    .form__signin .form__container {
+        border-radius: 0;
+        box-shadow: none;
+        width: 100vw;
+      
+      }
       
     }
   
