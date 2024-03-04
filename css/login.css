@@ -60,6 +60,10 @@ body {
     top: 10px;
     color: #ccc;
   }
+
+  .view-password, .hide-password{
+    cursor: pointer;
+  }
   
   .input-checkbox {
     position: absolute;
