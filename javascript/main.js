@@ -99,3 +99,35 @@ recipeSeekerRole ? recipeSeekerRole.addEventListener("click",()=>selectRole(0) )
 chefRole ? chefRole.addEventListener("click",()=>selectRole(1) ) : null
 adminRole ?adminRole.addEventListener("click",()=>selectRole(2) ) : null
 
+// RECIPE PAGE
+
+const searchInput = document.getElementById("searchInput");
+const searchDropdown = document.getElementById("searchDropdown");
+
+searchInput.addEventListener("input", function() {
+  // Simulate dropdown content dynamically based on search input
+  const searchValue = this.value.toLowerCase();
+  const dropdownItems = ["Result 1", "Result 2", "Result 3"]; // Example dropdown items
+  const filteredItems = dropdownItems.filter(item => item.toLowerCase().includes(searchValue));
+  
+  // Clear previous dropdown content
+  searchDropdown.innerHTML = "";
+  
+  // Populate dropdown with filtered items
+  filteredItems.forEach(item => {
+    const dropdownItem = document.createElement("a");
+    dropdownItem.textContent = item;
+    dropdownItem.href = "#"; // Add functionality if needed
+    searchDropdown.appendChild(dropdownItem);
+  });
+  
+  // Show dropdown
+  searchDropdown.style.display = filteredItems.length > 0 ? "block" : "none";
+});
+
+// Hide dropdown when clicking outside of it
+document.addEventListener("click", function(event) {
+  if (!event.target.matches("#searchInput")) {
+    searchDropdown.style.display = "none";
+  }
+});
