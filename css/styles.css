@@ -17,6 +17,7 @@ body, *{
 :root {
     --pacifico: "Pacifico", cursive;
     --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    --skyhover: linear-gradient(120deg, #c2e9fb   0%, #a1c4fd 100%);
     --transition: all 300ms ease;
     --container-width-lg: 90%;
     --container-width-md: 95%;

@@ -146,7 +146,7 @@ body {
   }
   
   button:hover {
-    background: #a1c4fd;
+    background: var(--skyhover);
   }
   
   .signin-link {
@@ -170,13 +170,12 @@ opacity: 0;
 
     .form__signin{
         background: white;
+        height: auto;
     }
 
     .form__signin .form__container {
         border-radius: 0;
-        box-shadow: none;
-        /* width: 100vw; */
-      
+        box-shadow: none;       
       }
       
     }
