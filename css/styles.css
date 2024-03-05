@@ -339,9 +339,7 @@ cursor: pointer;
 .recipe_like i{
     color: #DBE2E5;
     }
-.recipe_like-clicked i{
-    color: #FF6363;
-    }
+    
 .trending__recipe-imagecont{
     width: 100%;
     height: 270px;

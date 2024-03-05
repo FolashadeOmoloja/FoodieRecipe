@@ -1,6 +1,8 @@
 const openNavIcon =  document.querySelector(".open__nav-btn"),
 closeNavIcon =  document.querySelector(".close__nav-btn"),
 navItems = document.querySelectorAll(".nav__details"),
+recipeLike = document.querySelectorAll(".recipe_like"),
+recipeHeart = document.querySelectorAll(".recipe_like i"),
 recipeSeekerRole =  document.querySelector(".form-role-seeker"),
 chefRole =  document.querySelector(".form-role-chef"),
 adminRole =  document.querySelector(".form-role-admin"),
@@ -26,6 +28,26 @@ closeNavIcon ? closeNavIcon.addEventListener("click", () =>{
       openNavIcon.classList.remove("hidden")
       closeNavIcon.classList.add("hidden")
 }): null;
+
+//liking recipes
+if (recipeLike){
+  let likeBool = false
+  const likeRecipeFunc = ( recipeHeartIdx) =>{
+    likeBool = !likeBool; 
+    let likeRecipe = likeBool; 
+    let countLike = 0
+   if (likeRecipe) {
+    recipeHeart[recipeHeartIdx].style.color = '#FF6363'
+    countLike =1
+   } else {
+    recipeHeart[recipeHeartIdx].style.color = '#DBE2E5'
+    countLike = 0
+   } 
+  }
+  recipeLike.forEach((icon, idx)=>{
+      icon.addEventListener("click", () => likeRecipeFunc(idx))
+    })
+}
 
 
 //password
