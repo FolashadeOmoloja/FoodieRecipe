@@ -175,7 +175,7 @@ opacity: 0;
     .form__signin .form__container {
         border-radius: 0;
         box-shadow: none;
-        width: 100vw;
+        /* width: 100vw; */
       
       }
       
