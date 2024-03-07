@@ -196,3 +196,69 @@ function closeDropdown(customDropdownContent) {
 
 
 //RECIPE CATEGORIES AND RECIPE DISPLAY
+import { recipeCategories } from "./constants.js";
+const generalCategoriesDisplay = document.querySelector('.recipe-categories-display');
+
+// Initialize an empty string to store the generated HTML content
+let categoryDivs = '';
+
+// Iterate through each category
+recipeCategories.forEach((category) => {
+  // Generate HTML for the category
+  let categoryDiv = `
+    <section class="recipe-category-display">
+      <div class="flex-row cat-item">
+        <div>
+          <img src="${category.categoryImage}" alt="${category.categoryName}">
+        </div>
+        <span>${category.categoryName}</span>
+      </div>
+      <section class="flex-row recipe-details-section">
+  `;
+
+  // Iterate through each recipe in the category
+  category.recipeDetails.forEach((recipe) => {
+    // Generate HTML for each recipe
+    let recipeDet = `
+      <div class="trending__recipe flex-column">
+        <div class="recipe_like flex-row div-center recipe_like-clicked"><i class="fa-solid fa-heart"></i></div>
+        <div class="trending__recipe-imagecont">
+          <img src="${recipe.recipeImg}" alt="recipe-img">
+        </div>
+        <span class="recipe-title">${recipe.recipetitle}</span>
+        <div class="flex-row recipe-details">
+          <div class="flex-row div-center">
+            <img src="assets/Timer.svg" alt="timer">
+            <span class="recipe-time">${recipe.recipeTime}</span>
+          </div>
+          <div class="flex-row div-center">
+            <img src="assets/ForkKnife.svg" alt="timer">
+            <span class="recipe-category">${recipe.category}</span>
+          </div>
+        </div>
+        <a href="${recipe.recipeLink}" class="view-recipe">View Recipe</a>
+      </div>
+    `;
+    
+    // Append the recipe HTML to the category HTML
+    categoryDiv += recipeDet;
+  });
+
+  // Close the recipe-details-section
+  categoryDiv += `</section>`;
+  
+  // Add a "View More Recipes" button
+  categoryDiv += `<div class="view-more-recipe-btn flex-row div-center"><a href="category-post.html">View More Recipes</a></div>`;
+  
+  // Close the category section
+  categoryDiv += `</section>`;
+  
+  // Append the category HTML to the overall HTML
+  categoryDivs += categoryDiv;
+});
+
+// Set the generated HTML content as the innerHTML of the generalCategoriesDisplay element
+generalCategoriesDisplay.innerHTML = categoryDivs;
+
+
+
