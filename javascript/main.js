@@ -11,7 +11,9 @@ hidePasswordIcon = document.querySelectorAll('.hide-password'),
 passwordInput = document.querySelectorAll('.password'),
 searchInput = document.getElementById("searchInput"),
 searchDropdown = document.getElementById("searchDropdown"),
-viewFilters = document.querySelector(".view-filters")
+viewFilters = document.querySelector(".view-filters"),
+searchContainerBottom = document.querySelector(".search__container-bottom"),
+customDropdowns = document.querySelectorAll(".custom-dropdown");
 
 
 
@@ -135,25 +137,27 @@ if(searchInput){
 }
 
 // filter functionality
+let viewFiltersBool = false
+const viewFiltersFunc =(element)=>{
+ 
+ viewFiltersBool = !viewFiltersBool
+ let viewFiltersDiv = viewFiltersBool; 
+ if(viewFiltersDiv){
+   element.classList.add('view-filters-clicked') 
+ } else {
+   element.classList.remove('view-filters-clicked') 
+ }
+}
 if(viewFilters){
-  let viewFiltersBool = false
-   const viewFiltersFunc =()=>{
-    
-    viewFiltersBool = !viewFiltersBool
-    let viewFiltersDiv = viewFiltersBool; 
-    if(viewFiltersDiv){
-      viewFilters.classList.add('view-filters-clicked') 
-      console.log(viewFilters)
-    } else {
-      viewFilters.classList.remove('view-filters-clicked') 
-      console.log('bye')
-    }
-   }
-  viewFilters.addEventListener("click", ()=> viewFiltersFunc())
+  viewFilters.addEventListener("click", ()=> {
+    viewFiltersFunc(viewFilters)
+    searchContainerBottom.style.display = searchContainerBottom.style.display === "flex" ? "none" : "flex";
+  })
+ 
 }
 
 
-const customDropdowns = document.querySelectorAll(".custom-dropdown");
+
 //custom drop down
 customDropdowns.forEach((customDropdown, index) => {
   const customDropdownBtn = customDropdown.querySelector(".custom-dropdown-toggle");
@@ -175,6 +179,7 @@ customDropdowns.forEach((customDropdown, index) => {
   // Show/hide dropdown when the button is clicked
   customDropdownBtn.addEventListener("click", () => {
     customDropdownContent.style.display = customDropdownContent.style.display === "block" ? "none" : "block";
+    viewFiltersFunc(customDropdownBtn)
   });
 
   // Close dropdown when clicking outside of it
