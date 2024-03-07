@@ -91,6 +91,17 @@
 
 } 
 
+/* Category Section styles */
+.recipe-categories-display{
+  margin-top: 40px;
+}
+.recipe-categories-display .cat-item div{
+  width: 4rem;
+  height: 4rem;
+}
+
+
+
   /* medium screens */
   @media screen and (max-width:700px) {
        .search__container-top, .search__container-bottom{

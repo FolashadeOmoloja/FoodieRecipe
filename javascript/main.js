@@ -193,3 +193,6 @@ customDropdowns.forEach((customDropdown, index) => {
 function closeDropdown(customDropdownContent) {
   customDropdownContent.style.display = "none";
 }
+
+
+//RECIPE CATEGORIES AND RECIPE DISPLAY
