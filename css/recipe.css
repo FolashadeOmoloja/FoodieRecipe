@@ -95,6 +95,12 @@
 .recipe-categories-display{
   margin-top: 40px;
 }
+
+.recipe-categories-display .cat-item {
+align-items: center;
+font-size: 32px;
+margin-bottom: 40px;
+}
 .recipe-categories-display .cat-item div{
   width: 4rem;
   height: 4rem;
@@ -117,3 +123,9 @@
         justify-content: flex-start;
       }
     }
+
+    @media screen and (max-width:600px) {
+      .recipe-categories-display .cat-item>span {
+        font-size: 24px;
+        }
+      }

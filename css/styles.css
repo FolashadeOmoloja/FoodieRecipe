@@ -314,7 +314,7 @@ background: #c2e9fb;
 margin: 0.5rem 0 2rem 0;
 }
 
-.trending__recipes{
+.trending__recipes, .category__recipes{
    display: flex;
    flex-wrap: wrap;
     text-transform: capitalize;
