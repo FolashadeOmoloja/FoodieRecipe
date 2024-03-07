@@ -74,6 +74,10 @@ h2{
     align-items: center;
 }
 
+.cursor-pointer{
+    cursor: pointer;
+}
+
 .container{
     width: var(--container-width-lg);
     max-width: 1800px;

@@ -151,3 +151,40 @@ if(viewFilters){
    }
   viewFilters.addEventListener("click", ()=> viewFiltersFunc())
 }
+
+
+const customDropdowns = document.querySelectorAll(".custom-dropdown");
+//custom drop down
+customDropdowns.forEach((customDropdown, index) => {
+  const customDropdownBtn = customDropdown.querySelector(".custom-dropdown-toggle");
+  const customDropdownContent = customDropdown.querySelector(".custom-dropdown-content");
+
+  // Populate dropdown with dynamic values
+  const dynamicValues = [`Option 1 - ${index + 1}`, `Option 2 - ${index + 1}`, `Option 3 - ${index + 1}`]; // Example dynamic values
+  dynamicValues.forEach(value => {
+    const dropdownItem = document.createElement("div");
+    dropdownItem.textContent = value;
+    dropdownItem.classList.add("dropdown-item");
+    dropdownItem.addEventListener("click", () => {
+      customDropdownBtn.textContent = value; // Update button text when option is clicked
+      closeDropdown(customDropdownContent); // Close dropdown after selecting an option
+    });
+    customDropdownContent.appendChild(dropdownItem);
+  });
+
+  // Show/hide dropdown when the button is clicked
+  customDropdownBtn.addEventListener("click", () => {
+    customDropdownContent.style.display = customDropdownContent.style.display === "block" ? "none" : "block";
+  });
+
+  // Close dropdown when clicking outside of it
+  document.addEventListener("click", event => {
+    if (!event.target.matches(".custom-dropdown-toggle") && !event.target.matches(".dropdown-item")) {
+      closeDropdown(customDropdownContent);
+    }
+  });
+});
+
+function closeDropdown(customDropdownContent) {
+  customDropdownContent.style.display = "none";
+}

@@ -1,6 +1,6 @@
 
 /* search section */
-.search-container {
+.search-container, .custom-dropdown {
     position: relative;
     display: inline-block;
   }
@@ -9,7 +9,7 @@
     margin-bottom: 20px;
   }
   
-  #searchInput {
+  #searchInput, .custom-dropdown-toggle {
     width: 500px;
     padding: 16px 10px;
     font-size: 16px;
@@ -17,7 +17,7 @@
 
 
 
-  #searchInput, .view-filters{
+  #searchInput, .view-filters, .custom-dropdown-toggle{
     border: 1px solid #ccc;
     border-radius: 4px;
   }
@@ -40,7 +40,7 @@
   #searchButton:hover i{
     color: #a1c4fd;
   }
-  .dropdown-content {
+  .dropdown-content, .custom-dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -51,13 +51,14 @@
     overflow-y: scroll;
   }
   
-  .dropdown-content a {
+  .dropdown-content a, .custom-dropdown-item {
     padding: 12px 16px;
     text-decoration: none;
+    cursor: pointer;
     display: block;
   }
   
-  .dropdown-content a:hover {
+  .dropdown-content a:hover, .custom-dropdown-item:hover {
     background-color: #f1f1f1;
   }
 
@@ -65,14 +66,27 @@
     gap: 10px;
     height: 52px;
     padding: 0 10px ;
-    cursor: pointer;
   }
   
-
   .view-filters-clicked i{
     transform: rotate(180deg);
     transition: transform 300ms ease;
   }
+
+
+  /* custom-dropdown container */
+
+.custom-dropdown-toggle {
+  width: 300px;
+  background: none;
+}
+.custom-dropdown-content {
+
+ max-height: 200px;
+
+} 
+
+
 
   /* medium screens */
   @media screen and (max-width:700px) {
