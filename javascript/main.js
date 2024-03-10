@@ -50,7 +50,7 @@ if (recipeLike){
    } 
   }
   recipeLike.forEach((icon, idx)=>{
-      icon.addEventListener("click", () => likeRecipeFunc(idx))
+      icon.addEventListener("click", () => likeRecipeFunc(idx), console.log('hi'))
     })
 }
 
@@ -213,7 +213,7 @@ recipeCategories.forEach((category) => {
         </div>
         <span>${category.categoryName}</span>
       </div>
-      <section class="flex-row recipe-details-section">
+      <section class="recipe-details-section category__recipes space-between"">
   `;
 
   // Iterate through each recipe in the category
@@ -258,7 +258,9 @@ recipeCategories.forEach((category) => {
 });
 
 // Set the generated HTML content as the innerHTML of the generalCategoriesDisplay element
-generalCategoriesDisplay.innerHTML = categoryDivs;
+if(generalCategoriesDisplay){
+  generalCategoriesDisplay.innerHTML = categoryDivs;
+}
 
 
 
