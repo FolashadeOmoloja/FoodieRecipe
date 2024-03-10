@@ -35,22 +35,23 @@ closeNavIcon ? closeNavIcon.addEventListener("click", () =>{
 }): null;
 
 //liking recipes
+let likeBool = false
+const likeRecipeFunc = ( recipeHeartIdx) =>{
+  if (!recipeHeart) return
+  likeBool = !likeBool; 
+  let likeRecipe = likeBool; 
+  let countLike = 0
+ if (likeRecipe) {
+  recipeHeart[recipeHeartIdx].style.color = '#FF6363'
+  countLike =1
+ } else {
+  recipeHeart[recipeHeartIdx].style.color = '#DBE2E5'
+  countLike = 0
+ } 
+}
 if (recipeLike){
-  let likeBool = false
-  const likeRecipeFunc = ( recipeHeartIdx) =>{
-    likeBool = !likeBool; 
-    let likeRecipe = likeBool; 
-    let countLike = 0
-   if (likeRecipe) {
-    recipeHeart[recipeHeartIdx].style.color = '#FF6363'
-    countLike =1
-   } else {
-    recipeHeart[recipeHeartIdx].style.color = '#DBE2E5'
-    countLike = 0
-   } 
-  }
   recipeLike.forEach((icon, idx)=>{
-      icon.addEventListener("click", () => likeRecipeFunc(idx), console.log('hi'))
+      icon.addEventListener("click", () => likeRecipeFunc(idx))
     })
 }
 
@@ -199,10 +200,8 @@ function closeDropdown(customDropdownContent) {
 import { recipeCategories } from "./constants.js";
 const generalCategoriesDisplay = document.querySelector('.recipe-categories-display');
 
-// Initialize an empty string to store the generated HTML content
 let categoryDivs = '';
 
-// Iterate through each category
 recipeCategories.forEach((category) => {
   // Generate HTML for the category
   let categoryDiv = `
@@ -216,12 +215,11 @@ recipeCategories.forEach((category) => {
       <section class="recipe-details-section category__recipes space-between"">
   `;
 
-  // Iterate through each recipe in the category
-  category.recipeDetails.forEach((recipe) => {
+  category.recipeDetails.forEach((recipe, idx) => {
     // Generate HTML for each recipe
     let recipeDet = `
       <div class="trending__recipe flex-column">
-        <div class="recipe_like flex-row div-center recipe_like-clicked"><i class="fa-solid fa-heart"></i></div>
+        <div class="recipe_like  flex-row div-center recipe_like-clicked"><i class="fa-solid fa-heart recipe-heart" ></i></div>
         <div class="trending__recipe-imagecont">
           <img src="${recipe.recipeImg}" alt="recipe-img">
         </div>
@@ -239,28 +237,29 @@ recipeCategories.forEach((category) => {
         <a href="${recipe.recipeLink}" class="view-recipe">View Recipe</a>
       </div>
     `;
-    
-    // Append the recipe HTML to the category HTML
+ 
     categoryDiv += recipeDet;
   });
-
-  // Close the recipe-details-section
   categoryDiv += `</section>`;
-  
-  // Add a "View More Recipes" button
   categoryDiv += `<div class="view-more-recipe-btn flex-row div-center"><a href="category-post.html">View More Recipes</a></div>`;
-  
-  // Close the category section
   categoryDiv += `</section>`;
-  
-  // Append the category HTML to the overall HTML
   categoryDivs += categoryDiv;
+
 });
 
-// Set the generated HTML content as the innerHTML of the generalCategoriesDisplay element
+
 if(generalCategoriesDisplay){
   generalCategoriesDisplay.innerHTML = categoryDivs;
 }
 
+document.addEventListener('click', function(event) {
+  if (event.target.matches('.recipe_like')) {
+    const likeHeart = event.target.children[0]; 
+    let likeBool = likeHeart.style.color === 'rgb(255, 99, 99)'; 
 
+    likeHeart.style.color = likeBool ? '#DBE2E5' : '#FF6363'; 
+    // Perform additional actions based on like state
+    // For example, update count or send a request to the server
+  }
+});
 

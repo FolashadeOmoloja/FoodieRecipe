@@ -485,7 +485,8 @@ color: #c2e9fb;
     }
 
   .nav__items,  .nav__login{
-        padding-top:20px 
+        padding-top:20px ;
+        z-index: 20;
     }
 
     .nav__items li{
