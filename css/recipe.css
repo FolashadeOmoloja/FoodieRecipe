@@ -111,6 +111,62 @@ margin-bottom: 40px;
 }
 
 
+/*RECIPE_POSTS CSS STYLES*/
+.recipe__post-container{
+margin-top: 50px;
+}
+.details-container, .print-share{
+  margin: 48px 0;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.details-container div{
+  gap: 0.8rem;
+  font-size: 14px;
+  
+}
+.det-title, .print-share-div{
+font-weight: 700;
+font-size: 14px;
+}
+
+.print-share{
+  text-align: center;
+}
+.print-share-div div{
+  width: 56px;
+  height: 56px;
+  background: #a1c4fd;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+.print-share-div img{
+width: 24px;
+height: 24px;
+}
+
+.line-divider{
+  width: 2px;
+  background: #ccc;
+  height: 45px;
+}
+
+
+@media screen and (max-width:1024px) {
+.recipe__post-container header{
+  flex-direction: column;
+}
+
+.print-share, .details-container{
+  margin: 32px 0;
+}
+.print-share{
+  margin-top: 0;
+}
+  }
+
 
   /* medium screens */
   @media screen and (max-width:700px) {
@@ -126,10 +182,30 @@ margin-bottom: 40px;
       .view-filters{
         justify-content: flex-start;
       }
+
+      .details-container{
+        justify-content: space-between;
+      }
+
+      .line-divider, .det-img, .print-share span{
+        display: none;
+      }
+
+      .print-share-div div{
+        width: 24px;
+        height: 24px;
+        background: transparent;
+      }
     }
 
     @media screen and (max-width:600px) {
       .recipe-categories-display .cat-item>span {
         font-size: 24px;
         }
+
+      .details-container{
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: start;
+      }
       }
