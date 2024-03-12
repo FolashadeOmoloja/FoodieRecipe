@@ -263,3 +263,43 @@ document.addEventListener('click', function(event) {
   }
 });
 
+
+
+// rating system
+const rateRecipeBtn = document.querySelector('.rate-recipe-btn');
+const ratingContainer = document.querySelector('.rating-container');
+
+// Show rating container on button click
+rateRecipeBtn.addEventListener('click', () => {
+  ratingContainer.style.display = 'block';
+});
+
+// Create stars
+for (let i = 1; i <= 5; i++) {
+  const star = document.createElement('span');
+  star.classList.add('star', 'fa', 'fa-star', 'fa-2x');
+  star.setAttribute('data-rating', i); // Set data attribute for rating value
+  ratingContainer.appendChild(star);
+}
+
+// Rate recipe function using event delegation
+ratingContainer.addEventListener('click', (event) => {
+  const clickedStar = event.target;
+  if (clickedStar.classList.contains('star')) {
+    const rating = parseInt(clickedStar.getAttribute('data-rating'));
+    
+    // Fill stars up to the clicked star
+    const stars = ratingContainer.querySelectorAll('.star');
+    stars.forEach((star, index) => {
+      if (index < rating) {
+        star.classList.add('fa-solid');
+      } else {
+        star.classList.remove('fa-solid');
+      }
+    });
+    
+    // You can also return the rating or perform further actions with it
+    return rating;
+  }
+});
+
